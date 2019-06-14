@@ -1,15 +1,24 @@
 import React from "react";
 import ReactDom from "react-dom";
+import "./main.css";
 
 const App = () => {
+  const linkImageStyle = {
+    backgroundImage:
+      'url("https://static.thenounproject.com/png/225966-200.png")'
+  };
+
   return (
     <React.Fragment>
       <nav className="navigation">
         <a>
-          <img src="https://static.thenounproject.com/png/225966-200.png" />
+          <img
+            src="https://static.thenounproject.com/png/225966-200.png"
+            height="40px"
+          />
         </a>
         <ul>
-          <li>Home</li>
+          <li>My Bookmarks</li>
         </ul>
       </nav>
 
@@ -45,7 +54,16 @@ const App = () => {
           </form>
         </div>
 
-        <div className="rightContent" />
+        <div className="rightContent">
+          <div>
+            <div style={linkImageStyle} />
+            <div>
+              <h2>
+                <a href="#">Some link!</a>
+              </h2>
+            </div>
+          </div>
+        </div>
       </main>
     </React.Fragment>
   );
