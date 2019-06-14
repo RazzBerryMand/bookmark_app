@@ -25843,13 +25843,13 @@ var App = function App() {
   })), _react.default.createElement("ul", null, _react.default.createElement("li", null, "My Bookmarks"))), _react.default.createElement("main", null, _react.default.createElement("div", {
     className: "leftContent"
   }, _react.default.createElement("img", {
-    src: "https://static.thenounproject.com/png/225966-200.png"
+    src: "http://chittagongit.com/images/ios-bookmark-icon/ios-bookmark-icon-29.jpg"
   }), _react.default.createElement("form", null, _react.default.createElement("h2", {
     className: "formTitle"
   }, "Add a bookmark"), _react.default.createElement("div", null, _react.default.createElement("label", {
     for: "linkTitle",
     className: "formLabel"
-  }, "Enter a title"), _react.default.createElement("input", {
+  }, "Enter title"), _react.default.createElement("input", {
     type: "text",
     name: "linkTitle",
     minLength: "1",
@@ -25858,16 +25858,23 @@ var App = function App() {
   })), _react.default.createElement("div", null, _react.default.createElement("label", {
     for: "linkHref",
     className: "formLabel"
-  }, "Enter a link"), _react.default.createElement("input", {
+  }, "Enter link"), _react.default.createElement("input", {
     type: "text",
     name: "linkHref",
     minLength: "7",
     placeholder: "https://example.com/"
-  })), _react.default.createElement("button", null, "Add bookmark "))), _react.default.createElement("div", {
+  })), _react.default.createElement("button", null, "Click to add"))), _react.default.createElement("div", {
     className: "rightContent"
-  }, _react.default.createElement("div", null, _react.default.createElement("div", {
+  }, _react.default.createElement("h2", {
+    className: "rightTitle"
+  }, "Saved bookmarks"), _react.default.createElement("div", {
+    className: "linkCard"
+  }, _react.default.createElement("div", {
+    className: "linkCardImage",
     style: linkImageStyle
-  }), _react.default.createElement("div", null, _react.default.createElement("h2", null, _react.default.createElement("a", {
+  }), _react.default.createElement("div", {
+    className: "linkCardLink"
+  }, _react.default.createElement("h2", null, _react.default.createElement("a", {
     href: "#"
   }, "Some link!")))))));
 };

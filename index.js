@@ -24,12 +24,12 @@ const App = () => {
 
       <main>
         <div className="leftContent">
-          <img src="https://static.thenounproject.com/png/225966-200.png" />
+          <img src="http://chittagongit.com/images/ios-bookmark-icon/ios-bookmark-icon-29.jpg" />
           <form>
             <h2 className="formTitle">Add a bookmark</h2>
             <div>
               <label for="linkTitle" className="formLabel">
-                Enter a title
+                Enter title
               </label>
               <input
                 type="text"
@@ -41,7 +41,7 @@ const App = () => {
             </div>
             <div>
               <label for="linkHref" className="formLabel">
-                Enter a link
+                Enter link
               </label>
               <input
                 type="text"
@@ -50,14 +50,15 @@ const App = () => {
                 placeholder="https://example.com/"
               />
             </div>
-            <button>Add bookmark </button>
+            <button>Click to add</button>
           </form>
         </div>
 
         <div className="rightContent">
-          <div>
-            <div style={linkImageStyle} />
-            <div>
+          <h2 className="rightTitle">Saved bookmarks</h2>
+          <div className="linkCard">
+            <div className="linkCardImage" style={linkImageStyle} />
+            <div className="linkCardLink">
               <h2>
                 <a href="#">Some link!</a>
               </h2>
