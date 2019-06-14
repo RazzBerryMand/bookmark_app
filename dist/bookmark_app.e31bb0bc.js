@@ -25892,8 +25892,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var App = function App() {
   var _useState = (0, _react.useState)([{
-    linkName: "google",
-    linkHref: "https://www.google.com"
+    linkName: "Example Link",
+    linkHref: "#"
   }]),
       _useState2 = _slicedToArray(_useState, 2),
       cardData = _useState2[0],
@@ -26003,7 +26003,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51667" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62502" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

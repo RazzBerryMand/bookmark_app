@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import ReactDom from "react-dom";
 import LinkCard from "./components/LinkCard";
+
 import "./main.css";
 
 const App = () => {
   const [cardData, setCardData] = useState([
-    { linkName: "google", linkHref: "https://www.google.com" }
+    { linkName: "Example Link", linkHref: "#" }
   ]);
 
   const [newCard, setNewCard] = useState({ linkName: "", linkHref: "" });
