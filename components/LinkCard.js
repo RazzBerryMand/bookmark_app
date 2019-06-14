@@ -6,18 +6,22 @@ const LinkCard = props => {
       'url("https://static.thenounproject.com/png/225966-200.png")'
   };
 
-  return (
-    <React.Fragment>
-      <div className="linkCard">
+  const mappedData = props.cards.map((card, index) => {
+    return (
+      <div key={index} className="linkCard">
         <div className="linkCardImage" style={linkImageStyle} />
         <div className="linkCardLink">
           <h2>
-            <a href="#">Some link!</a>
+            <a href={card.linkHref} target="blank">
+              {card.linkName}
+            </a>
           </h2>
         </div>
       </div>
-    </React.Fragment>
-  );
+    );
+  });
+
+  return <React.Fragment>{mappedData}</React.Fragment>;
 };
 
 export default LinkCard;

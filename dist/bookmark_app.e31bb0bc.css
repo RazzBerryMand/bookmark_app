@@ -14,12 +14,14 @@ body {
   align-items: center;
   justify-content: space-between;
   background: tomato;
+  border-bottom: 1px solid black;
 }
 
 .navigation ul {
   list-style: none;
   padding: 0;
   color: white;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -51,8 +53,8 @@ main {
   justify-content: space-around;
   border-radius: 10px;
   box-shadow: 1px 1px 3px rgb(0, 0, 0, 0.5);
-  width: 50%;
-  height: 200px;
+  width: 70%;
+  height: 220px;
   margin: 20px auto 0 auto;
   background: tomato;
   padding: 1.5em;
@@ -102,7 +104,7 @@ main {
 
 .rightContent .linkCard {
   background: whitesmoke;
-  width: 60%;
+  width: 80%;
   display: flex;
   margin-top: 20px;
   align-items: center;

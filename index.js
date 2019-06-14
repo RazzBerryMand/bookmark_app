@@ -27,7 +27,7 @@ const App = () => {
           />
         </a>
         <ul>
-          <li>My Bookmarks</li>
+          <li>Bookmarks</li>
         </ul>
       </nav>
 
@@ -37,8 +37,8 @@ const App = () => {
           <form onSubmit={e => e.preventDefault()}>
             <h2 className="formTitle">Add a bookmark</h2>
             <div>
-              <label for="linkTitle" className="formLabel">
-                Enter title
+              <label htmlFor="linkTitle" className="formLabel">
+                Enter title:
               </label>
               <input
                 value={newCard.linkName}
@@ -53,8 +53,8 @@ const App = () => {
               />
             </div>
             <div>
-              <label for="linkHref" className="formLabel">
-                Enter link
+              <label htmlFor="linkHref" className="formLabel">
+                Enter link:
               </label>
               <input
                 value={newCard.linkHref}
@@ -75,7 +75,7 @@ const App = () => {
 
         <div className="rightContent">
           <h2 className="rightTitle">Saved bookmarks</h2>
-          <LinkCard />
+          <LinkCard cards={cardData} />
         </div>
       </main>
     </React.Fragment>

@@ -25764,16 +25764,21 @@ var LinkCard = function LinkCard(props) {
   var linkImageStyle = {
     backgroundImage: 'url("https://static.thenounproject.com/png/225966-200.png")'
   };
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "linkCard"
-  }, _react.default.createElement("div", {
-    className: "linkCardImage",
-    style: linkImageStyle
-  }), _react.default.createElement("div", {
-    className: "linkCardLink"
-  }, _react.default.createElement("h2", null, _react.default.createElement("a", {
-    href: "#"
-  }, "Some link!")))));
+  var mappedData = props.cards.map(function (card, index) {
+    return _react.default.createElement("div", {
+      key: index,
+      className: "linkCard"
+    }, _react.default.createElement("div", {
+      className: "linkCardImage",
+      style: linkImageStyle
+    }), _react.default.createElement("div", {
+      className: "linkCardLink"
+    }, _react.default.createElement("h2", null, _react.default.createElement("a", {
+      href: card.linkHref,
+      target: "blank"
+    }, card.linkName))));
+  });
+  return _react.default.createElement(_react.default.Fragment, null, mappedData);
 };
 
 var _default = LinkCard;
@@ -25917,7 +25922,7 @@ var App = function App() {
   }, _react.default.createElement("a", null, _react.default.createElement("img", {
     src: "https://static.thenounproject.com/png/225966-200.png",
     height: "40px"
-  })), _react.default.createElement("ul", null, _react.default.createElement("li", null, "My Bookmarks"))), _react.default.createElement("main", null, _react.default.createElement("div", {
+  })), _react.default.createElement("ul", null, _react.default.createElement("li", null, "Bookmarks"))), _react.default.createElement("main", null, _react.default.createElement("div", {
     className: "leftContent"
   }, _react.default.createElement("img", {
     src: "http://chittagongit.com/images/ios-bookmark-icon/ios-bookmark-icon-29.jpg"
@@ -25928,9 +25933,9 @@ var App = function App() {
   }, _react.default.createElement("h2", {
     className: "formTitle"
   }, "Add a bookmark"), _react.default.createElement("div", null, _react.default.createElement("label", {
-    for: "linkTitle",
+    htmlFor: "linkTitle",
     className: "formLabel"
-  }, "Enter title"), _react.default.createElement("input", {
+  }, "Enter title:"), _react.default.createElement("input", {
     value: newCard.linkName,
     onChange: function onChange(e) {
       return setNewCard(_objectSpread({}, newCard, {
@@ -25943,9 +25948,9 @@ var App = function App() {
     maxLength: "25",
     placeholder: "Max 25 characters"
   })), _react.default.createElement("div", null, _react.default.createElement("label", {
-    for: "linkHref",
+    htmlFor: "linkHref",
     className: "formLabel"
-  }, "Enter link"), _react.default.createElement("input", {
+  }, "Enter link:"), _react.default.createElement("input", {
     value: newCard.linkHref,
     onChange: function onChange(e) {
       return setNewCard(_objectSpread({}, newCard, {
@@ -25964,7 +25969,9 @@ var App = function App() {
     className: "rightContent"
   }, _react.default.createElement("h2", {
     className: "rightTitle"
-  }, "Saved bookmarks"), _react.default.createElement(_LinkCard.default, null))));
+  }, "Saved bookmarks"), _react.default.createElement(_LinkCard.default, {
+    cards: cardData
+  }))));
 };
 
 _reactDom.default.render(_react.default.createElement(App, null), document.getElementById("app"));
